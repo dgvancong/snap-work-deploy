@@ -2,7 +2,7 @@ var router = require('express')();
 var db = require('./dbConnect');
 
 // Lấy danh sách dự án
-router.get('/', function(req, res) {
+router.get('/project', function(req, res) {
   const query = `
     SELECT project.*, projectDetails.*,
      user.fullName AS leadFullName ,
